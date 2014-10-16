@@ -23,8 +23,7 @@
   <link rel="stylesheet" href="client/css/styles.css">
   
   <!-- Top Slider & Customer Sliders-->
-  <link rel="stylesheet" href="client/css/owl.carousel.css"/>
-  <link rel="stylesheet" href="client/css/owl.theme.css"/>
+  <link href="client/bower_components/angular-carousel/dist/angular-carousel.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <!--[if lt IE 7]>
@@ -40,54 +39,7 @@
         <img ng-src="client/img/gr.png" alt="ITWorx.gr Greek">
       </div>
     </div>
-  
-<!-- TOP SLIDESHOW -->
-    <div id="owl-demo" class="owl-carousel owl-theme">
-      <div class="item"><img src="client/img/waves.png" alt="Shype app">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>{{title_en[14].title_en}}</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">{{message_en[14].message_en}}</li>
-            <li>{{details1_en[14].details1_en}}</li>
-            <li>{{details2_en[14].details2_en}}</li>
-            <li>{{details3_en[14].details3_en}}</li>
-            <li>{{details4_en[14].details4_en}}</li>
-          </ul>
-          <div id="slideimg1" class="large-5 columns"><img ng-src="{{img[14].img}}" alt="{{img[14].img}}"></div>
-      </div>
-      <div class="item"><img src="client/img/waves.png" alt="SOUL App">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>SOUL the most beatiful greek magazine!</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">Now available for iPhone &amp; iPad. See inside:</li>
-            <li>All SOUL covers</li>
-            <li>Articles and editorials</li>
-            <li>Current songs</li>
-            <li>iPad edition of the Application</li>
-          </ul>
-        <div id="slideimg2" class="large-5 columns"><img src="img/soul_bn.png" alt="SOUL App"></div>
-      </div>
-      <div class="item"><img src="client/img/waves.png" alt="Solt website">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>Custom Made Corporate Webs</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">Solis Tractors greek website.</li>
-            <li>Custom Designed</li>
-            <li>Developed in ASP.net MVC</li>
-            <li>Designed to promote your products</li>
-            <li>iPhone/iPad &amp; Android Apps</li>
-          </ul>
-        <div id="slideimg3" class="large-5 columns"><img src="img/sollt.png" alt="Solt website"></div>
-      </div>
-      <div class="item"><img src="client/img/waves.png" alt="ITWorx applications">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>Beautiful Applications</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">Order your app at ITworx!</li>
-            <li>Modern Design</li>
-            <li>Instant Support</li>
-            <li>A company you can trust</li>
-            <li>iPhone/iPad &amp; Android Apps</li>
-          </ul>
-        <div id="slideimg4" class="large-5 columns"><img src="img/app.png" alt="ITWorx applications"></div>
-      </div>
-    </div>
+
   <div ng-view></div>
 
   <!-- In production use:
@@ -96,8 +48,8 @@
   <script src="client/bower_components/angular/angular.js"></script>
   <script src="client/bower_components/angular-route/angular-route.js"></script>
   <script src="client/foundation/js/mm-foundation-tpls-0.3.1.min.js"></script>
-  <script src="client/js/vendor/jquery.js"></script>
-  <script src="client/js/owl.carousel.js"></script>
+  <script src="client/bower_components/angular-carousel/dist/angular-carousel.js"></script>
+  <script src="client/bower_components/angular-touch/angular-touch.js"></script>
   <script src="client/app.js"></script>
   <script src="client/js/controllers/home.js"></script>
   <script src="client/js/services/home.js"></script>
@@ -105,24 +57,6 @@
     function open_win() {
       window.open("http://www.bangee.gr/player.asp?utm_source=BangeePlayer&utm_medium=ExternalSites&utm_campaign=fromItworx","Ratting","width=750,height=548,left=150,top=200,toolbar=0,status=1,resizable=no")
   }
-  </script>
-  <!-- TOP RESPONSIVE SLIDESHOW-->
-  <script>
-    $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
-      navigation : false, // Show next and prev buttons
-      slideSpeed : 500,
-      autoPlay:3000,
-      singleItem:true
-     
-      // "singleItem:true" is a shortcut for:
-      // items : 1,
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
-      });
-    });
   </script>
 </body>
 </html>

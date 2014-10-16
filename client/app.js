@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'mm.foundation',
+  'angular-carousel',
   'myAppControllers',
   'myAppServices'
 ]).

@@ -1,5 +1,5 @@
 body {
-    background-image: url('/client/img/webbg.jpg');
+    background-image: url('/client/img/webbg.jpg') !important;
     background-position: center top;
     max-width:100%;
     height: auto;

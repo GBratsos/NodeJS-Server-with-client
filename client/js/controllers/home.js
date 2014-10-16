@@ -13,6 +13,7 @@ myAppControllers.controller('myAppPortfoliosCtrl', ['$scope','mainMenuServices',
 		$scope.sname_en = data;
 	});
 
+	//SUBMENU LOGIC (prepei na paro ta id tou submenu pou einai monadika)
 	$scope.findElementById = function(id){
 		var el;
 		angular.forEach($scope.sname_en, function(element){
@@ -23,17 +24,29 @@ myAppControllers.controller('myAppPortfoliosCtrl', ['$scope','mainMenuServices',
 		})
 		return el;
 	}
+	
+
+	//TOP SLIDESHOW LOGIC (pairnei ta bid pou einai monadika kai emfanizei t' analoga slides)
 	topSlideshowServices.getTopSlideshow().then(function(data) {
-		console.log(data);	
-		$scope.title_en = data;
-		$scope.message_en = data;
-		$scope.details1_en = data;
-		$scope.details2_en = data;
-		$scope.details3_en = data;
-		$scope.details4_en = data;
-		$scope.img = data;
+		$scope.homeCarousel = [];
+		$scope.homeCarousel.push(findElementCarouselByBid(1,data));
+		$scope.homeCarousel.push(findElementCarouselByBid(3,data));
+		$scope.homeCarousel.push(findElementCarouselByBid(5,data));
+		$scope.homeCarousel.push(findElementCarouselByBid(8,data));
 	});
 	
+	var findElementCarouselByBid = function(bid, slideList){
+		var candidateSlide;
+		angular.forEach(slideList, function(slide) {
+			if (slide.bid === bid) {
+				candidateSlide = slide;
+				return;
+			}
+		});
+		return candidateSlide;
+	}
+
+	//PORTFOLIO SERVICE
 	portfolioServices.getPortfolio().then(function(data) {
 		console.log(data);
 		$scope.img = data;

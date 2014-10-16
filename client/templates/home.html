@@ -51,6 +51,19 @@
       </div>
     </div>
   </div>
+  <!-- TOP SLIDESHOW -->
+  <ul rn-carousel class="image" style="height:500px;">
+    <li ng-repeat="slide in homeCarousel">
+      <div class="layer">
+          <div class="large-12 columns"><h2>{{slide.title_en}}</h2></div>
+          <p>{{slide.message_en}}</p>
+          <p>Bratsaki</p>
+          <p>George</p>
+          <p>George</p>
+          <div id="slideimg3"> <img ng-src="http://www.itworx.gr/banner/{{slide.img}}" alt="{{slide.img}}"></div>
+      </div>      
+    </li>
+  </ul>
   <!-- Gia ti metavliti thumbs (dikia mou) sta dedomena pou erxontai apo to controller me metavliti antonis -->
   <!-- Tipose to parakato kommati tou JSON-->
 <div ng-repeat="thumbs in img2"> 
