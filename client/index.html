@@ -6,154 +6,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ITWorx.gr Mobile Applications, Websites & Online Marketing</title>
+  <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Keywords" content="website,design,web desing,graffix design,advertising,internet,eshop,dynamic websites,utopia,concept,coanag design,IT services,Advertising,adwords">
-  <meta name="Description" content="ITWorx is a creative agency based in Larisa, Greece and provides Mobile Apps, Google Adwords Optimisation, Website Development,Search Engine Management , Graphics Design ,IT services and Advertising.">
-  <meta name="robots" content="all">
-  <meta name="Author" content="info@itworx.gr">
-  <script src="client/js/vendor/modernizr.js"></script>
-
-  <!-- Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300' rel='stylesheet' type='text/css'>
-
-  <!-- CSS FILES -->
   <link rel="stylesheet" href="client/bower_components/foundation/css/foundation.css">
-  <link rel="stylesheet" href="client/css/styles.css">
-  
-  <!-- Top Slider & Customer Sliders-->
-  <link rel="stylesheet" href="client/css/owl.carousel.css"/>
-  <link rel="stylesheet" href="client/css/owl.theme.css"/>
 </head>
 <body>
+
+
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-    <div class="row first">
-      <div class="large-5 medium-5 small-6 columns">
-        <a ng-href="/" title="ITWorx.gr"><img ng-src="client/img/itworxgr.png" alt="ITWorx.gr"></a>
-      </div>
-      <div class="large-3 medium-3 small-4 columns">
-        <a href="javascript:void(0);" title="Bangee Radio Player " onclick="open_win()"><img ng-src="client/img/bangee_player.png" alt="Bangee Radio player"></a><br>
-        <img ng-src="client/img/en.png" alt="ITWorx.gr English">
-        <img ng-src="client/img/gr.png" alt="ITWorx.gr Greek">
-      </div>
-    </div>
-  <div class="row">
-    <div class="large-10 large-push-1 small-12 columns">
-      <div class="contain-to-grid">
-        <top-bar class="fixed">
-          <ul class="title-area">
-            <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
-          </ul>
-          <top-bar-section>
-            <ul>
-              <li class="has-dropdown active">
-              <a ng-href="#" title="{{name_en[0].name_en}}">{{name_en[0].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a ng-href="news.html" title="{{sname_en[1].sname_en}}">{{sname_en[1].sname_en}}</a></li>
-                  <li><a ng-href="careers.html" title="{{sname_en[7].sname_en}}">{{sname_en[7].sname_en}}</a></li>
-                  <li><a ng-href="digiretail.html" title="{{sname_en[14].sname_en}}">{{sname_en[14].sname_en}}</a></li>
-                  <li><a ng-href="digimobile.html" title="{{sname_en[19].sname_en}}">{{sname_en[19].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-              <a ng-href="#" title="{{name_en[1].name_en}}">{{name_en[1].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a href="webdesign.html" title="{{sname_en[3].sname_en}}">{{sname_en[3].sname_en}}</a></li>
-                  <li><a href="eshopdesign.html" title="{{sname_en[4].sname_en}}">{{sname_en[4].sname_en}}</a></li>
-                  <li><a href="weddingweb.html" title="{{sname_en[5].sname_en}}">{{sname_en[5].sname_en}}</a></li>
-                  <li><a href="seo.html" title="{{sname_en[18].sname_en}}">{{sname_en[18].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-              <a ng-href="{{name_en[2].name_en}}">{{name_en[2].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a href="iosapps.html" title="{{sname_en[21].sname_en}}">{{sname_en[21].sname_en}}</a></li>
-                  <li><a href="personell-apps.html" title="{{sname_en[22].sname_en}}">{{sname_en[22].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li><a ng-href="design.html" title="{{name_en[3].name_en}}">{{name_en[3].name_en}}</a></li>
-              <li><a ng-href="social.html" title="{{name_en[4].name_en}}">{{name_en[4].name_en}}</a></li>
-              <li class="has-dropdown">
-              <a ng-href="#" title="{{name_en[5].name_en}}">{{name_en[5].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a ng-href="advert.html" title="{{sname_en[9].sname_en}}">{{sname_en[9].sname_en}}</a></li>
-                  <li><a ng-href="smsworx.html" title="{{sname_en[23].sname_en}}">{{sname_en[23].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li><a ng-href="it.html" title="{{name_en[6].name_en}}">{{name_en[6].name_en}}</a></li>
-              <li><a ng-href="contact.html" title="{{name_en[7].name_en}}">{{name_en[7].name_en}}</a></li>
-              <li><a ng-href="http://www.itworx.gr/portfolios/" title="{{name_en[8].name_en}}">{{name_en[8].name_en}}</a></li>
-          </ul>
-        </top-bar-section>
-        </top-bar>
-      </div>
-    </div>
-  </div>
-    <!-- TOP SLIDESHOW -->
-    <div id="owl-demo" class="owl-carousel owl-theme">
-      <div class="item"><img src="client/img/waves.png" alt="Shype app">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>{{title_en[14].title_en}}</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">{{message_en[14].message_en}}</li>
-            <li>{{details1_en[14].details1_en}}</li>
-            <li>{{details2_en[14}.details2_en}}</li>
-            <li>{{details3_en[14].details3_en}}</li>
-            <li>{{details4_en[14].details4_en}}</li>
-          </ul>
-          <div id="slideimg1" class="large-5 columns"><img ng-src="{{img[14].img}}" alt="{{img[14].img}}"></div>
-      </div>
-      <div class="item"><img src="client/img/waves.png" alt="SOUL App">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>SOUL the most beatiful greek magazine!</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">Now available for iPhone &amp; iPad. See inside:</li>
-            <li>All SOUL covers</li>
-            <li>Articles and editorials</li>
-            <li>Current songs</li>
-            <li>iPad edition of the Application</li>
-          </ul>
-        <div id="slideimg2" class="large-5 columns"><img src="img/soul_bn.png" alt="SOUL App"></div>
-      </div>
-      <div class="item"><img src="client/img/waves.png" alt="Solt website">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>Custom Made Corporate Webs</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">Solis Tractors greek website.</li>
-            <li>Custom Designed</li>
-            <li>Developed in ASP.net MVC</li>
-            <li>Designed to promote your products</li>
-            <li>iPhone/iPad &amp; Android Apps</li>
-          </ul>
-        <div id="slideimg3" class="large-5 columns"><img src="img/sollt.png" alt="Solt website"></div>
-      </div>
-      <div class="item"><img src="client/img/waves.png" alt="ITWorx applications">
-          <div class="large-12 medium-12 small-12 columns slide-h2"><h2>Beautiful Applications</h2></div><br><br><br><br><br><br><br><br><br>
-          <ul class="slide-ul">
-            <li class="no-bullet">Order your app at ITworx!</li>
-            <li>Modern Design</li>
-            <li>Instant Support</li>
-            <li>A company you can trust</li>
-            <li>iPhone/iPad &amp; Android Apps</li>
-          </ul>
-        <div id="slideimg4" class="large-5 columns"><img src="img/app.png" alt="ITWorx applications"></div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <h1>George Bratsos Rullez</h1>
   <div ng-view></div>
+  <p>META TO NGVIEW</p>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -161,33 +27,8 @@
   <script src="client/bower_components/angular/angular.js"></script>
   <script src="client/bower_components/angular-route/angular-route.js"></script>
   <script src="client/foundation/js/mm-foundation-tpls-0.3.1.min.js"></script>
-  <script src="client/js/vendor/jquery.js"></script>
-  <script src="client/js/owl.carousel.js"></script>
   <script src="client/app.js"></script>
   <script src="client/js/controllers/home.js"></script>
   <script src="client/js/services/home.js"></script>
-  <script>
-    function open_win() {
-      window.open("http://www.bangee.gr/player.asp?utm_source=BangeePlayer&utm_medium=ExternalSites&utm_campaign=fromItworx","Ratting","width=750,height=548,left=150,top=200,toolbar=0,status=1,resizable=no")
-  }
-  </script>
-  <!-- TOP RESPONSIVE SLIDESHOW-->
-  <script>
-    $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
-      navigation : false, // Show next and prev buttons
-      slideSpeed : 500,
-      autoPlay:3000,
-      singleItem:true
-     
-      // "singleItem:true" is a shortcut for:
-      // items : 1,
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
-      });
-    });
-  </script>
 </body>
 </html>

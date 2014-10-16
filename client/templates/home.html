@@ -1,71 +1,38 @@
-<div ng-controller="myAppPortfoliosCtrl">
-  <div class="row">
-    <div class="large-10 large-push-1 small-12 columns">
-      <div class="contain-to-grid">
-        <top-bar class="fixed">
-          <ul class="title-area">
-            <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
-          </ul>
-          <top-bar-section>
-            <ul>
-              <li class="has-dropdown active">
-              <a ng-href="#" title="{{name_en[0].name_en}}">{{name_en[0].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a ng-href="news.html" title="{{sname_en[1].sname_en}}">{{sname_en[1].sname_en}}</a></li>
-                  <li><a ng-href="careers.html" title="{{sname_en[7].sname_en}}">{{sname_en[7].sname_en}}</a></li>
-                  <li><a ng-href="digiretail.html" title="{{sname_en[14].sname_en}}">{{sname_en[14].sname_en}}</a></li>
-                  <li><a ng-href="digimobile.html" title="{{sname_en[19].sname_en}}">{{sname_en[19].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-              <a ng-href="#" title="{{name_en[1].name_en}}">{{name_en[1].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a href="webdesign.html" title="{{sname_en[3].sname_en}}">{{sname_en[3].sname_en}}</a></li>
-                  <li><a href="eshopdesign.html" title="{{sname_en[4].sname_en}}">{{sname_en[4].sname_en}}</a></li>
-                  <li><a href="weddingweb.html" title="{{sname_en[5].sname_en}}">{{sname_en[5].sname_en}}</a></li>
-                  <li><a href="seo.html" title="{{sname_en[18].sname_en}}">{{sname_en[18].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-              <a ng-href="{{name_en[2].name_en}}">{{name_en[2].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a href="iosapps.html" title="{{sname_en[21].sname_en}}">{{sname_en[21].sname_en}}</a></li>
-                  <li><a href="personell-apps.html" title="{{sname_en[22].sname_en}}">{{sname_en[22].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li><a ng-href="design.html" title="{{name_en[3].name_en}}">{{name_en[3].name_en}}</a></li>
-              <li><a ng-href="social.html" title="{{name_en[4].name_en}}">{{name_en[4].name_en}}</a></li>
-              <li class="has-dropdown">
-              <a ng-href="#" title="{{name_en[5].name_en}}">{{name_en[5].name_en}}</a>
-                <ul class="dropdown">
-                  <li><a ng-href="advert.html" title="{{sname_en[9].sname_en}}">{{sname_en[9].sname_en}}</a></li>
-                  <li><a ng-href="smsworx.html" title="{{sname_en[23].sname_en}}">{{sname_en[23].sname_en}}</a></li>
-                </ul>
-              </li>
-              <li><a ng-href="it.html" title="{{name_en[6].name_en}}">{{name_en[6].name_en}}</a></li>
-              <li><a ng-href="contact.html" title="{{name_en[7].name_en}}">{{name_en[7].name_en}}</a></li>
-              <li><a ng-href="http://www.itworx.gr/portfolios/" title="{{name_en[8].name_en}}">{{name_en[8].name_en}}</a></li>
-          </ul>
-        </top-bar-section>
-        </top-bar>
-      </div>
-    </div>
-  </div>
+<div ng-controller="myAppHomeCtrl">
+  <top-bar class="fixed">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">My Site</a></h1>
+      </li>
+      <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
+    </ul>
 
-  
-  <!-- Gia ti metavliti thumbs (dikia mou) sta dedomena pou erxontai apo to controller me metavliti antonis -->
-  <!-- Tipose to parakato kommati tou JSON-->
-<div ng-repeat="thumbs in img"> 
-  
-  <img ng-src="http://www.itworx.gr/view_inc1.asp?id=2&thumb=1&img={{thumbs.img}}">
-  <p>{{thumbs.type}}</p>
-</div>
-<div>
-    <img ng-src="http://www.itworx.gr/view_inc1.asp?id=2&thumb=1&img={{img[0].img}}">
-    <img ng-src="http://www.itworx.gr/view_inc1.asp?id=2&thumb=1&img={{img[0].img_thum}}">
-</div>
-<div>
-  <img ng-src="http://www.itworx.gr/view_inc1.asp?id=5&thumb=1&img={{img[4].img}}">
+    <top-bar-section>
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="active"><a href="#">Active</a></li>
+        <li has-dropdown>
+          <a href="#">Dropdown</a>
+          <ul top-bar-dropdown>
+            <li><a href="#">First link in dropdown</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="#">Left</a></li>
+      </ul>
+    </top-bar-section>
+  </top-bar>
+
+
+  <a class="button"> </a>
+ <p>{{bratsaki}}</p>
+<div ng-repeat="vil in antonis"> 
+	<!-- Gia ti metavliti vil (dikia mou) sta dedomena pou erxontai apo to controller me metavliti antonis -->
+	<!-- Tipose to parakato kommati tou JSON-->
+	<p>{{vil.vilName_en}}</p>
 </div>
 
 </div>
