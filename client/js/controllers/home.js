@@ -13,6 +13,16 @@ myAppControllers.controller('myAppPortfoliosCtrl', ['$scope','mainMenuServices',
 		$scope.sname_en = data;
 	});
 
+	$scope.findElementById = function(id){
+		var el;
+		angular.forEach($scope.sname_en, function(element){
+			if (element.id === id) {
+				console.log(element);
+				el = element;
+			};
+		})
+		return el;
+	}
 	topSlideshowServices.getTopSlideshow().then(function(data) {
 		console.log(data);	
 		$scope.title_en = data;
