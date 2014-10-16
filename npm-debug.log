@@ -8,23 +8,21 @@
 5 verbose run-script [ 'prestart', 'start', 'poststart' ]
 6 info prestart server@0.0.0
 7 verbose unsafe-perm in lifecycle true
-8 info start server@0.0.0
-9 verbose unsafe-perm in lifecycle true
-10 info server@0.0.0 Failed to exec start script
-11 error server@0.0.0 start: `node ./bin/www`
-11 error Exit status 8
-12 error Failed at the server@0.0.0 start script.
-12 error This is most likely a problem with the server package,
-12 error not with npm itself.
-12 error Tell the author that this fails on your system:
-12 error     node ./bin/www
-12 error You can get their info via:
-12 error     npm owner ls server
-12 error There is likely additional logging output above.
-13 error System Windows_NT 6.1.7601
-14 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
-15 error cwd E:\angular-seed\nodejs server
-16 error node -v v0.10.32
-17 error npm -v 1.4.28
-18 error code ELIFECYCLE
-19 verbose exit [ 1, true ]
+8 info server@0.0.0 Failed to exec prestart script
+9 error server@0.0.0 prestart: `npm install`
+9 error Exit status 1
+10 error Failed at the server@0.0.0 prestart script.
+10 error This is most likely a problem with the server package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     npm install
+10 error You can get their info via:
+10 error     npm owner ls server
+10 error There is likely additional logging output above.
+11 error System Windows_NT 6.1.7601
+12 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+13 error cwd C:\Users\gbratsos\Desktop\NodeJS-Server-with-client-Progress
+14 error node -v v0.10.32
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
