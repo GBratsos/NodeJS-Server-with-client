@@ -1,12 +1,8 @@
-<div ng-controller="myAppHomeCtrl">
+<div ng-controller="myAppPortfoliosCtrl">
   <top-bar class="fixed">
     <ul class="title-area">
-      <li class="name">
-        <h1><a href="#">My Site</a></h1>
-      </li>
       <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
     </ul>
-
     <top-bar-section>
       <!-- Right Nav Section -->
       <ul class="right">
@@ -27,12 +23,21 @@
   </top-bar>
 
 
-  <a class="button"> </a>
  <p>{{bratsaki}}</p>
-<div ng-repeat="vil in antonis"> 
-	<!-- Gia ti metavliti vil (dikia mou) sta dedomena pou erxontai apo to controller me metavliti antonis -->
-	<!-- Tipose to parakato kommati tou JSON-->
-	<p>{{vil.vilName_en}}</p>
+
+  <!-- Gia ti metavliti thumbs (dikia mou) sta dedomena pou erxontai apo to controller me metavliti antonis -->
+  <!-- Tipose to parakato kommati tou JSON-->
+<div ng-repeat="thumbs in img"> 
+  
+  <img ng-src="http://itworx.gr/view_inc1.asp?id=2&thumb=1&img={{thumbs.img}}">
+  <p>{{thumbs.type}}</p>
+</div>
+<div>
+    <img ng-src="http://itworx.gr/view_inc1.asp?id=2&thumb=1&img={{img[0].img}}">
+    <img ng-src="http://itworx.gr/view_inc1.asp?id=2&thumb=1&img={{img[0].img_thum}}">
+</div>
+<div>
+  <img ng-src="http://itworx.gr/view_inc1.asp?id=5&thumb=1&img={{img[4].img}}">
 </div>
 
 </div>

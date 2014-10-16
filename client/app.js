@@ -13,7 +13,7 @@ config(['$routeProvider','$httpProvider', function($routeProvider, $httpProvider
   $routeProvider.
   	when('/', {
   		templateUrl: 'client/templates/home.html',
-  		controller: 'myAppHomeCtrl'
+  		controller: 'myAppPortfoliosCtrl'
   	}).
   	otherwise({redirectTo: '/'});
 
