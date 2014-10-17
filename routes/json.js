@@ -28,9 +28,9 @@ var requestToITWORX = function(domain, path, method, callback) {
 }
 
 /* GET json listing. */
-//router.get shmainei oti 8a breis ta json sto localhost:3000/json/getVillages
+//router.get: You will find your JSON file, at localhost:3000/json/getVillages
 router.get('/getVillages', function(req, res) {
-  requestToITWORX('wom.itworx.gr', '/index?action=getVillages','GET', function(data) {
+  requestToITWORX('http:www.randomsite.gr', '/index?action=getVillages','GET', function(data) {
   	res.send(data);
   })
 });
