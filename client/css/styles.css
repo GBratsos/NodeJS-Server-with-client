@@ -24,6 +24,11 @@ p, li {
     font-family: "open sans",Trebuchet MS,Tahoma;
 }
 
+.th img {
+    width:190px;
+    height:150px;
+}
+
 .no-bullet {
     list-style: none outside none;
 }
@@ -173,90 +178,45 @@ span.lead {
     line-height: 1.6;
 }
 
-.modal {
-font-weight: normal;
-font-size: 1rem;
-line-height: 1.6;
-margin-bottom: 1.25rem;
-text-rendering: optimizelegibility;
-}
 
 /* TOP SLIDESHOW STYLES*/
 
-#owl-demo .item {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-h2 {
-font-family: 'Open Sans', sans-serif !important;
-font-weight: 300;
-color: #eee;
-line-height: 110%;
-}
-
-.slide-h2 {
+.slideimg {
     position: absolute;
     top: 2%;
-    left: 8%;
+    left: 57%;
 }
 
-.slide-ul {
-    position: absolute;
-    font-family: 'Open Sans', sans-serif !important;
-    color: #eee;
+.slideheader h2 {
+    position:absolute;
+    font-family: "open sans",Trebuchet MS,Tahoma;
+    color:#eee;
+    font-weight: 300;
+}
+
+.messages {
+    padding-top: 100px;
+}
+.slidemessage{
+    font-family: "open sans",Trebuchet MS,Tahoma;
+    color:#eee;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.slidedetails {
+    font-family: "open sans",Trebuchet MS,Tahoma;
+    color:#eee;
     font-size: 1.1rem;
-    top: 25%;
-    left: 8%; 
+    font-weight: 300;
+    margin-bottom:10px;
 }
 
-.slide-ul li {
-    font-size: 1.1rem;
-}
-
-#slideimg1 {
-    position: absolute;
-    bottom: 0%;
-    right: 6%;
-    width: 28%;
-}
-
-#slideimg2 {
-    position: absolute;
-    bottom: -10%;
-    right: -3%;
-    width: 52%;
-}
-
-#slideimg3 {
-    position: absolute;
-    bottom: -8%;
-    right: -7%;
-    width: 48%;
-}
-
-#slideimg4 {
-    position: absolute;
-    bottom: 0%;
-    right: -10%;
-    width: 55%;
-}
 
 /* Medium screens  min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) { 
     .first {
         margin-top: 50px;
-    }
-    .slide-h2 {
-        position: absolute;
-        top: 3%;
-        left: 0.5%;
-    }
-    .slide-ul {
-        position: absolute;
-        top:25%;
-        left:0.5%; 
     }
     #img {
         position: absolute;
@@ -264,54 +224,34 @@ line-height: 110%;
         right: -3%;
         width: 60%;
     }
+
     .contain-to-grid {
         position: fixed;
         top:0;
         left:0;
     }
 
-    #slideimg1 {
-        position: absolute;
-        bottom: 5%;
-        right: -2%;
-        width: 42%;
+    .slideheader {
+        position:absolute;
+        top:3%;
     }
+        .th img {
+    width:auto;
+    height:150px;
+}
 
-    #slideimg2 {
+    .slideimg {
     position: absolute;
-    bottom: 5%;
-    right: -3%;
-    width: 52%;
-    }
+    left: 61%;
+    top: 19%;
+}   
 
-    #slideimg3 {
-        position: absolute;
-        bottom: 5%;
-        right: -1%;
-        width: 45%;
-    }
-
-    #slideimg4 {
-        position: absolute;
-        bottom: 15%;
-        right: -3%;
-        width: 48%;
-    }
 }
 
 /* SMALL SCREENS */
 @media only screen and (max-width: 40em) {
     .first {
         margin-top: 50px;
-    }
-    .slide-h2 {
-        position: absolute;
-        top: 3%;
-        left: 0.5%;
-    }
-  
-  .slide-ul {
-    display: none; 
     }
 
     .contain-to-grid{
@@ -320,32 +260,48 @@ line-height: 110%;
         left:0;
     }
 
-    #slideimg1 {
-        position: absolute;
-        bottom: 14%;
-        right: -14%;
-        width: 60%;
+    .th img {
+    width:auto;
+    height:90px;
     }
-
-    #slideimg2 {
+    .slideheader h2 {
     position: absolute;
-    bottom: 22%;
-    right: -3%;
-    width: 60%;
+    font-family: "open sans",Trebuchet MS,Tahoma;
+    color: #EEE;
+    font-weight: 300;
+    font-size: 1.3rem;
     }
 
-    #slideimg3 {
-        position: absolute;
-        bottom: 22%;
-        right: 0%;
-        width:55%;
+    .slideheader {
+        position:absolute;
+        top:3%;
     }
 
-    #slideimg4 {
-        position: absolute;
-        bottom: 24%;
-        right: -7%;
-        width: 58%;
+    .slidemessage{
+    font-family: "open sans",Trebuchet MS,Tahoma;
+    color:#eee;
+    font-size: 0.9rem;
+    font-weight: 300;
+    }
+
+    .slideimg {
+    position: absolute;
+    top: 31%;
+    left: 58%;
+    }
+
+    .slideimg img {
+    width: 66%;
+    height: auto;
+    }    
+
+    .slidedetails {
+        font-family: "open sans",Trebuchet MS,Tahoma;
+        color:#eee;
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom:10px;
+        text-transform: bold;
     }
 }
 
@@ -362,22 +318,6 @@ meta.foundation-mq-topbar {
     width: 64.00em !important; 
 }*/
 
-
-#owl-demo .item {
-    display: block;
-    width: 100%;
-    height: 363px !important; 
-}
-
-#owl-demo1 .item1{
-    margin: 3px;
-}
-
-#owl-demo1 .item1 img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
 
 button[type="submit"] {
     width: 185px;

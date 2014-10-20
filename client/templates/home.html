@@ -4,42 +4,42 @@
       <div class="contain-to-grid">
         <top-bar class="fixed">
           <ul class="title-area">
-            <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
+            <li toggle-top-bar class="menu-icon"><a ng-href="#">Menu</a></li>
           </ul>
           <top-bar-section>
             <ul>
               <li has-dropdown class="active">
-              <a ng-href="#" title="{{name_en[0].name_en}}">{{name_en[0].name_en}}</a>
+              <a title="{{name_en[0].name_en}}">{{name_en[0].name_en}}</a>
                 <ul top-bar-dropdown>
-                  <li><a ng-href="news.html" title="{{sname_en[1].sname_en}}">{{findElementById(1).sname_en}}</a></li>
-                  <li><a ng-href="careers.html" title="{{sname_en[7].sname_en}}">{{findElementById(1).sname_en}}</a></li>
-                  <li><a ng-href="digiretail.html" title="{{sname_en[14].sname_en}}">{{findElementById(1).sname_en}}</a></li>
-                  <li><a ng-href="digimobile.html" title="{{sname_en[19].sname_en}}">{{findElementById(1).sname_en}}</a></li>
+                  <li><a ng-href="news.html" title="{{findElementById(2).sname_en}}">{{findElementById(2).sname_en}}</a></li>
+                  <li><a ng-href="careers.html" title="{{findElementById(8).sname_en}}">{{findElementById(8).sname_en}}</a></li>
+                  <li><a ng-href="digiretail.html" title="{{findElementById(16).sname_en}}">{{findElementById(16).sname_en}}</a></li>
+                  <li><a ng-href="digimobile.html" title="{{findElementById(29).sname_en}}">{{findElementById(29).sname_en}}</a></li>
                 </ul>
               </li>
               <li has-dropdown>
-              <a ng-href="#" title="{{name_en[1].name_en}}">{{name_en[1].name_en}}</a>
+              <a title="{{name_en[1].name_en}}">{{name_en[1].name_en}}</a>
                 <ul top-bar-dropdown>
-                  <li><a href="webdesign.html" title="{{sname_en[3].sname_en}}">{{sname_en[3].sname_en}}</a></li>
-                  <li><a href="eshopdesign.html" title="{{sname_en[4].sname_en}}">{{sname_en[4].sname_en}}</a></li>
-                  <li><a href="weddingweb.html" title="{{sname_en[5].sname_en}}">{{sname_en[5].sname_en}}</a></li>
-                  <li><a href="seo.html" title="{{sname_en[18].sname_en}}">{{sname_en[18].sname_en}}</a></li>
+                  <li><a ng-href="webdesign.html" title="{{findElementById(4).sname_en}}">{{findElementById(4).sname_en}}</a></li>
+                  <li><a ng-href="eshopdesign.html" title="{{findElementById(5).sname_en}}">{{findElementById(5).sname_en}}</a></li>
+                  <li><a ng-href="weddingweb.html" title="{{findElementById(6).sname_en}}">{{findElementById(6).sname_en}}</a></li>
+                  <li><a ng-href="seo.html" title="{{findElementById(23).sname_en}}">{{findElementById(23).sname_en}}</a></li>
                 </ul>
               </li>
               <li has-dropdown>
               <a ng-href="{{name_en[2].name_en}}">{{name_en[2].name_en}}</a>
                 <ul top-bar-dropdown>
-                  <li><a href="iosapps.html" title="{{sname_en[21].sname_en}}">{{sname_en[21].sname_en}}</a></li>
-                  <li><a href="personell-apps.html" title="{{sname_en[22].sname_en}}">{{sname_en[22].sname_en}}</a></li>
+                  <li><a ng-href="iosapps.html" title="{{findElementById(30).sname_en}}">{{findElementById(30).sname_en}}</a></li>
+                  <li><a ng-href="personell-apps.html" title="{{findElementById(31).sname_en}}">{{findElementById(31).sname_en}}</a></li>
                 </ul>
               </li>
               <li><a ng-href="design.html" title="{{name_en[3].name_en}}">{{name_en[3].name_en}}</a></li>
               <li><a ng-href="social.html" title="{{name_en[4].name_en}}">{{name_en[4].name_en}}</a></li>
               <li has-dropdown>
-              <a ng-href="#" title="{{name_en[5].name_en}}">{{name_en[5].name_en}}</a>
+              <a title="{{name_en[5].name_en}}">{{name_en[5].name_en}}</a>
                 <ul top-bar-dropdown>
-                  <li><a ng-href="advert.html" title="{{sname_en[9].sname_en}}">{{sname_en[9].sname_en}}</a></li>
-                  <li><a ng-href="smsworx.html" title="{{sname_en[23].sname_en}}">{{sname_en[23].sname_en}}</a></li>
+                  <li><a ng-href="advert.html" title="{{findElementById(10).sname_en}}">{{findElementById(10).sname_en}}</a></li>
+                  <li><a ng-href="smsworx.html" title="{{findElementById(33).sname_en}}">{{findElementById(33).sname_en}}</a></li>
                 </ul>
               </li>
               <li><a ng-href="it.html" title="{{name_en[6].name_en}}">{{name_en[6].name_en}}</a></li>
@@ -55,28 +55,102 @@
   <ul rn-carousel class="image" style="height:500px;">
     <li ng-repeat="slide in homeCarousel">
       <div class="layer">
-          <div class="large-12 columns"><h2>{{slide.title_en}}</h2></div>
-          <p>{{slide.message_en}}</p>
-          <p>Bratsaki</p>
-          <p>George</p>
-          <p>George</p>
-          <div id="slideimg3"> <img ng-src="http://www.itworx.gr/banner/{{slide.img}}" alt="{{slide.img}}"></div>
+          <div class="large-8 medium-10 small-12 columns slideheader"><h2>{{slide.title_en}}</h2></div>
+          <div class="small-10 columns messages"><h5 class="slidemessage">{{slide.message_en}}</h5>
+          <p class="slidedetails">{{slide.details1_en}}</p>
+          <p class="slidedetails">{{slide.details2_en}}</p>
+          <p class="slidedetails">{{slide.details3_en}}</p>
+          <p class="slidedetails">{{slide.details4_en}}</p>
+        </div>
+          <div class="large-4 medium-5 small-8 columns slideimg"><img ng-src="http://www.itworx.gr/banner/{{slide.img}}" alt="{{slide.img}}"></div>
       </div>      
     </li>
   </ul>
+
+  <div class="row main">
+        <h3 id="webdesigns">Web Designs</h3><hr>
+        <ul class="small-block-grid-3 text-center">
+          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}" alt="{{client[0].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[1].img}}" alt="{{client[1].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[2].img}}" alt="{{client[2].client}}"></a></li>
+        </ul>
+        <ul class="small-block-grid-3 text-center">
+          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[3].img}}" alt="{{client[3].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[4].img}}" alt="{{client[4].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[5].img}}" alt="{{client[5].client}}"></a></li>
+        </ul>
+        <ul class="small-block-grid-3 text-center">
+          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[6].img}}" alt="{{client[6].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[7].img}}" alt="{{client[7].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[8].img}}" alt="{{client[8].client}}"></a></li>
+        </ul>
+        <ul class="small-block-grid-3 text-center">
+          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[9].img}}" alt="{{client[9].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[10].img}}" alt="{{client[10].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[11].img}}" alt="{{client[11].client}}"></a></li>
+        </ul>
+        <ul class="small-block-grid-3 text-center">
+          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[12].img}}" alt="{{client[12].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[13].img}}" alt="{{client[13].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[14].img}}" alt="{{client[14].client}}"></a></li>
+        </ul>
+        <ul class="small-block-grid-3 text-center">
+          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[15].img}}" alt="{{client[15].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[16].img}}" alt="{{client[16].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[17].img}}" alt="{{client[17].client}}"></a></li>
+        </ul>
+        <ul class="small-block-grid-2 text-center">
+          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[18].img}}" alt="{{client[18].client}}"></a></li>
+          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[19].img}}" alt="{{client[19].client}}"></a></li>
+        </ul>
+  </div>
+  <footer>
+    <div class="row footer">
+      <div class="large-4 medium-4 columns">
+        <h3>{{findTextElementById(57).en_txt}}</h3>
+        <a ng-href="http://www.itworx.gr/nea/afoi-florou-android-app/">FMS android App by ITWorx.gr</a><br><span>10/09/2014</span><br>
+        <a ng-href="http://www.itworx.gr/nea/the-street-gr-online-streatwear-shop/">The-Street.gr - Online Streatwear Shop + Moblie Site</a><br><span>17/07/2014</span><br>
+        <a ng-href="http://www.itworx.gr/nea/2wheels_39/">2Wheels.gr - All about 2wheels</a><br><span>01/04/2014</span><br>
+        <a ng-href="http://www.itworx.gr/nea/soul-mag_38/">New iPhone / iPad App for SOUL Magazine designed &amp; developed by ITWorx.gr</a><br><span>16/12/2013</span>
+      </div>
+      <div class="large-3 medium-3 columns">
+        <h3 >{{findTextElementById(58).en_txt}}</h3>
+        <ul class="no-bullet">
+          <li><a ng-href="seo.html" title="{{findElementById(23).sname_en}}">{{findElementById(23).sname_en}}</a></li>
+          <li><a ng-href="iosapps.html" title="{{findElementById(30).sname_en}}">{{findElementById(30).sname_en}}</a></li>
+          <li><a ng-href="personell-apps.html" title="{{findElementById(31).sname_en}}">{{findElementById(31).sname_en}}</a></li>
+          <li><a ng-href="weddingweb.html" title="{{findElementById(6).sname_en}}">{{findElementById(6).sname_en}}</a></li>
+          <li><a ng-href="webdesign.html" title="{{findElementById(4).sname_en}}">{{findElementById(4).sname_en}}</a></li>
+          <li><a ng-href="eshopdesign.html" title="{{findElementById(5).sname_en}}">{{findElementById(5).sname_en}}</a></li>
+          <li><a ng-href="advert.html" title="{{findElementById(10).sname_en}}">{{findElementById(10).sname_en}}</a></li>
+        </ul>
+      </div>
+      <div class="large-5 medium-5 columns"><br><br><br><br>
+        <a ng-href="http://www.utopiadesign.gr/"><img ng-src="client/img/utopia_sm_heart.gif" alt="Utopia Design Concept"></a>
+        <!-- Skype 'My status' button http://www.skype.com/go/skypebuttons -->
+        <script type="text/javript" src="js/skypeCheck.js"></script>
+        <a ng-href="skype:itworx_skype?call"><img ng-src="client/img/itworx_skype.png" alt="Skype ITWorx!"></a>
+        <img ng-src="client/img/qritworx.png" alt="Scan the qr code of itworx" width="74">
+    </div>
+  </div>
+</footer>
+
+
+
+
   <!-- Gia ti metavliti thumbs (dikia mou) sta dedomena pou erxontai apo to controller me metavliti antonis -->
   <!-- Tipose to parakato kommati tou JSON-->
-<div ng-repeat="thumbs in img2"> 
+<!--<div ng-repeat="thumbs in img2"> 
   
-  <img ng-src="http://itworx.gr/view_inc1.asp?id=2&thumb=1&img={{thumbs.img}}">
+  <img ng-src="http://itworx.gr/view_inc1.asp?img={{thumbs.img}}">
   <p>{{thumbs.type}}</p>
 </div>
 <div>
-    <img ng-src="http://itworx.gr/view_inc1.asp?id=2&thumb=1&img={{img[0].img}}">
-    <img ng-src="http://itworx.gr/view_inc1.asp?id=2&thumb=1&img={{img[0].img_thum}}">
+    <img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}">
+    <img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img_thum}}">
 </div>
 <div>
-  <img ng-src="http://itworx.gr/view_inc1.asp?id=5&thumb=1&img={{img[4].img}}">
-</div>
+  <img ng-src="http://wwwitworx.gr/view_inc1.asp?img={{img[4].img}}">
+</div>-->
 
 </div>

@@ -65,8 +65,8 @@ router.get('/getLatestFooter', function(req, res) {
   })
 });
 
-router.get('/gettTexts', function(req, res) {
-  requestToITWORX('imeet.gr', '/index?action=texts','GET', function(data) {
+router.get('/getTexts', function(req, res) {
+  requestToITWORX('imeet.gr', '/index?action=Texts','GET', function(data) {
   	res.send(data);
   })
 });

@@ -44,11 +44,25 @@ myAppServices.factory('topSlideshowServices', ['$http', '$q', function($http, $q
 
 }]);
 
-myAppServices.factory('portfolioServices', ['$http', '$q', function($http, $q) {
+myAppServices.factory('portfolioWebsitesServices', ['$http', '$q', function($http, $q) {
 	return {
-		getPortfolio: function() {
+		getPortfolioWebsites: function() {
 			var deffered = $q.defer();
-			$http.get('json/getPortfolio').
+			$http.get('json/getPortfolioWebsites').
+				success(function(data){
+					deffered.resolve(data);
+				});
+			return deffered.promise;
+		}
+	}
+
+}]);
+
+myAppServices.factory('websitecontent', ['$http', '$q', function($http, $q) {
+	return {
+		getTexts: function() {
+			var deffered = $q.defer();
+			$http.get('json/getTexts').
 				success(function(data){
 					deffered.resolve(data);
 				});
