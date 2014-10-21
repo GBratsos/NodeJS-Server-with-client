@@ -6,6 +6,7 @@ angular.module('myApp', [
   'mm.foundation',
   'angular-carousel',
   'myAppControllers',
+  'ngSanitize',
   'myAppServices'
 ]).
 config(['$routeProvider','$httpProvider', function($routeProvider, $httpProvider) {

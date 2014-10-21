@@ -20,8 +20,7 @@ myAppControllers.controller('myAppPortfoliosCtrl', ['$scope','mainMenuServices',
 			};
 		})
 		return el;
-	}
-	
+	}	
 
 	//TOP SLIDESHOW LOGIC (pairnei ta bid pou einai monadika kai emfanizei t' analoga slides)
 	topSlideshowServices.getTopSlideshow().then(function(data) {
@@ -66,10 +65,32 @@ myAppControllers.controller('myAppPortfoliosCtrl', ['$scope','mainMenuServices',
 
 }]);
 
-//myAppControllers.controller('myAppPortfolioCtrl', ['$scope','portfolioServices', function($scope, portfolioServices) {
-//	portfolioServices.getportfolio().then(function(data) {
-//		console.log(data);
-//		$scope.img = data;
-//	});
+// EDO KSEKINANE TA MODALS
 
-//}]);
+var ModalDemoCtrl = function ($scope, $modal, $log) {
+
+  $scope.items = ['client', 'text', 'skills', 'url', 'descr', 'created'];
+
+  $scope.open = function () {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'myModalContent.html',
+      controller: ModalInstanceCtrl,
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
+  };
+};
+
+// Please note that $modalInstance represents a modal window (instance) dependency.
+// It is not the same as the $modal service used above.
+
+var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+};

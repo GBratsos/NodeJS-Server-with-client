@@ -56,7 +56,7 @@
     <li ng-repeat="slide in homeCarousel">
       <div class="layer">
           <div class="large-8 medium-10 small-12 columns slideheader"><h2>{{slide.title_en}}</h2></div>
-          <div class="small-10 columns messages"><h5 class="slidemessage">{{slide.message_en}}</h5>
+          <div class="small-10 columns messages"><h5 class="slidemessage" >{{slide.message_en}}</h5>
           <p class="slidedetails">{{slide.details1_en}}</p>
           <p class="slidedetails">{{slide.details2_en}}</p>
           <p class="slidedetails">{{slide.details3_en}}</p>
@@ -70,7 +70,22 @@
   <div class="row main">
         <h3 id="webdesigns">Web Designs</h3><hr>
         <ul class="small-block-grid-3 text-center">
-          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}" alt="{{client[0].client}}"></a></li>
+              <li>
+                <div ng-controller="ModalDemoCtrl">
+                  <script type="text/ng-template" id="myModalContent.html">
+                    <h3>CASE STUDY</h3>
+                    <p class="modal"><span class="lead">Client:</span>&nbsp;{{client[0].client}}</p>
+                    <p class="modal"><span class="lead">Αντικείμενο:</span>&nbsp;{{text[0].text}}</p>
+                    <p class="modal"><span class="lead">Skills:</span>&nbsp;{{skills[0].skills}}</p>
+                    <p class="modal"><span class="lead">Url:</span><a style="font-size:1rem;" ng-href="{{url[0].url}}" target="_blank" title="{{client[0].client}}">&nbsp;{{url[0].url}}</a></p>
+                    <p class="modal">{{descr[0].descr}}</p>
+                    <p><b>Created:</b>&nbsp;{{created[0].created}}</p>
+                    <img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}" alt="{{client[0].client}}">
+                      <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+                  </script>
+                  <a class="th [radius]" ng-click="open()" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}" alt="{{client[0].client}}"></a>
+                </div>
+            </li>
           <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[1].img}}" alt="{{client[1].client}}"></a></li>
           <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[2].img}}" alt="{{client[2].client}}"></a></li>
         </ul>
@@ -126,10 +141,10 @@
         </ul>
       </div>
       <div class="large-5 medium-5 columns"><br><br><br><br>
-        <a ng-href="http://www.utopiadesign.gr/"><img ng-src="client/img/utopia_sm_heart.gif" alt="Utopia Design Concept"></a>
+        <a href="http://www.utopiadesign.gr/"><img src="client/img/utopia_sm_heart.gif" alt="Utopia Design Concept"></a>
         <!-- Skype 'My status' button http://www.skype.com/go/skypebuttons -->
         <script type="text/javript" src="js/skypeCheck.js"></script>
-        <a ng-href="skype:itworx_skype?call"><img ng-src="client/img/itworx_skype.png" alt="Skype ITWorx!"></a>
+        <a href="skype:itworx_skype?call"><img src="client/img/itworx_skype.png" alt="Skype ITWorx!"></a>
         <img ng-src="client/img/qritworx.png" alt="Scan the qr code of itworx" width="74">
     </div>
   </div>
