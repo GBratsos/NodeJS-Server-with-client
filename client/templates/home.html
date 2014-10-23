@@ -1,14 +1,16 @@
 <div ng-controller="myAppPortfoliosCtrl">
   <div class="row">
     <div class="large-10 large-push-1 small-12 columns">
-      <div class="contain-to-grid">
-        <top-bar class="fixed">
+      <div class="contain-to-grid" >
+      <div ng-controller="TopBarCtrl">
+        <top-bar>
           <ul class="title-area">
-            <li toggle-top-bar class="menu-icon"><a ng-href="#">Menu</a></li>
+            <li class="name"></li>
+            <li toggle-top-bar class="menu-icon"><a>Menu</a></li>
           </ul>
           <top-bar-section>
             <ul>
-              <li has-dropdown class="active">
+              <li has-dropdown>
               <a title="{{name_en[0].name_en}}">{{name_en[0].name_en}}</a>
                 <ul top-bar-dropdown>
                   <li><a ng-href="news.html" title="{{findElementById(2).sname_en}}">{{findElementById(2).sname_en}}</a></li>
@@ -49,6 +51,7 @@
         </top-bar-section>
         </top-bar>
       </div>
+      </div>
     </div>
   </div>
   <!-- TOP SLIDESHOW -->
@@ -77,46 +80,46 @@
                     <p class="modal"><span class="lead">Client:</span>&nbsp;{{client[0].client}}</p>
                     <p class="modal"><span class="lead">Αντικείμενο:</span>&nbsp;{{text[0].text}}</p>
                     <p class="modal"><span class="lead">Skills:</span>&nbsp;{{skills[0].skills}}</p>
-                    <p class="modal"><span class="lead">Url:</span><a style="font-size:1rem;" ng-href="{{url[0].url}}" target="_blank" title="{{client[0].client}}">&nbsp;{{url[0].url}}</a></p>
+                    <p class="modal"><span class="lead">Url:</span><a style="font-size:1rem;" href="http://{{url[0].url}}" target="_blank" title="{{client[0].client}}">&nbsp;{{url[0].url}}</a></p>
                     <p class="modal">{{descr[0].descr}}</p>
                     <p><b>Created:</b>&nbsp;{{created[0].created}}</p>
                     <img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}" alt="{{client[0].client}}">
                       <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
                   </script>
-                  <a class="th [radius]" ng-click="open()" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}" alt="{{client[0].client}}"></a>
+                  <a class="th [radius]" ng-click="open()"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[0].img}}" alt="{{client[0].client}}"></a>
                 </div>
             </li>
-          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[1].img}}" alt="{{client[1].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[2].img}}" alt="{{client[2].client}}"></a></li>
+          <li><a class="th [radius]" href="#"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[1].img}}" alt="{{client[1].client}}"></a></li>
+          <li><a class="th [radius]" href="#"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[2].img}}" alt="{{client[2].client}}"></a></li>
         </ul>
         <ul class="small-block-grid-3 text-center">
-          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[3].img}}" alt="{{client[3].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[4].img}}" alt="{{client[4].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[5].img}}" alt="{{client[5].client}}"></a></li>
+          <li><a class="th [radius]" href="#"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[3].img}}" alt="{{client[3].client}}"></a></li>
+          <li><a class="th [radius]" href="#" > <img src="http://www.itworx.gr/view_inc1.asp?img={{img[4].img}}" alt="{{client[4].client}}"></a></li>
+          <li><a class="th [radius]" href="#" ><img src="http://www.itworx.gr/view_inc1.asp?img={{img[5].img}}" alt="{{client[5].client}}"></a></li>
         </ul>
         <ul class="small-block-grid-3 text-center">
-          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[6].img}}" alt="{{client[6].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[7].img}}" alt="{{client[7].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[8].img}}" alt="{{client[8].client}}"></a></li>
+          <li><a class="th [radius]" href="#"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[6].img}}" alt="{{client[6].client}}"></a></li>
+          <li><a class="th [radius]" href="#" > <img src="http://www.itworx.gr/view_inc1.asp?img={{img[7].img}}" alt="{{client[7].client}}"></a></li>
+          <li><a class="th [radius]" href="#" ><img src="http://www.itworx.gr/view_inc1.asp?img={{img[8].img}}" alt="{{client[8].client}}"></a></li>
         </ul>
         <ul class="small-block-grid-3 text-center">
-          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[9].img}}" alt="{{client[9].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[10].img}}" alt="{{client[10].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[11].img}}" alt="{{client[11].client}}"></a></li>
+          <li><a class="th [radius]" href="#"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[9].img}}" alt="{{client[9].client}}"></a></li>
+          <li><a class="th [radius]" href="#"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[10].img}}" alt="{{client[10].client}}"></a></li>
+          <li><a class="th [radius]" href="#"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[11].img}}" alt="{{client[11].client}}"></a></li>
         </ul>
         <ul class="small-block-grid-3 text-center">
-          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[12].img}}" alt="{{client[12].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[13].img}}" alt="{{client[13].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[14].img}}" alt="{{client[14].client}}"></a></li>
+          <li><a class="th [radius]" href="#"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[12].img}}" alt="{{client[12].client}}"></a></li>
+          <li><a class="th [radius]" href="#" > <img src="http://www.itworx.gr/view_inc1.asp?img={{img[13].img}}" alt="{{client[13].client}}"></a></li>
+          <li><a class="th [radius]" href="#" ><img src="http://www.itworx.gr/view_inc1.asp?img={{img[14].img}}" alt="{{client[14].client}}"></a></li>
         </ul>
         <ul class="small-block-grid-3 text-center">
-          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[15].img}}" alt="{{client[15].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[16].img}}" alt="{{client[16].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="wheels"><img src="http://www.itworx.gr/view_inc1.asp?img={{img[17].img}}" alt="{{client[17].client}}"></a></li>
+          <li><a class="th [radius]" href="#"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[15].img}}" alt="{{client[15].client}}"></a></li>
+          <li><a class="th [radius]" href="#" > <img src="http://www.itworx.gr/view_inc1.asp?img={{img[16].img}}" alt="{{client[16].client}}"></a></li>
+          <li><a class="th [radius]" href="#" ><img src="http://www.itworx.gr/view_inc1.asp?img={{img[17].img}}" alt="{{client[17].client}}"></a></li>
         </ul>
         <ul class="small-block-grid-2 text-center">
-          <li><a class="th [radius]" href="#" data-reveal-id="larisaiki"><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[18].img}}" alt="{{client[18].client}}"></a></li>
-          <li><a class="th [radius]" href="#" data-reveal-id="alfakatsifa"> <img src="http://www.itworx.gr/view_inc1.asp?img={{img[19].img}}" alt="{{client[19].client}}"></a></li>
+          <li><a class="th [radius]" href="#" ><img ng-src="http://www.itworx.gr/view_inc1.asp?img={{img[18].img}}" alt="{{client[18].client}}"></a></li>
+          <li><a class="th [radius]" href="#" > <img src="http://www.itworx.gr/view_inc1.asp?img={{img[19].img}}" alt="{{client[19].client}}"></a></li>
         </ul>
   </div>
   <footer>

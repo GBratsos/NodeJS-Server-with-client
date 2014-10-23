@@ -65,11 +65,12 @@ myAppControllers.controller('myAppPortfoliosCtrl', ['$scope','mainMenuServices',
 
 }]);
 
-// EDO KSEKINANE TA MODALS
+//TOPBAR CONTROLLER
+var TopBarCtrl = function ($scope) {};
 
+
+//MODAL CONTROLLER
 var ModalDemoCtrl = function ($scope, $modal, $log) {
-
-  $scope.items = ['client', 'text', 'skills', 'url', 'descr', 'created'];
 
   $scope.open = function () {
 
@@ -78,9 +79,15 @@ var ModalDemoCtrl = function ($scope, $modal, $log) {
       controller: ModalInstanceCtrl,
       resolve: {
         items: function () {
-          return $scope.items;
+          return $scope.client;
         }
       }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
     });
   };
 };
@@ -88,9 +95,18 @@ var ModalDemoCtrl = function ($scope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
-
+var ModalInstanceCtrl = function ($scope, $modalInstance, $http) {
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
-};
+
+  $http.get('json/getPortfolioWebsites').
+  	success(function(data){
+  	$scope.img = data;
+  	$scope.client = data;
+  	$scope.text = data;
+  	$scope.skills = data;
+  	$scope.url = data;
+  	$scope.created = data;
+	});
+ };

@@ -63,6 +63,13 @@ nav {
     line-height: 23px;
 }
 
+.name {
+    color: #eee;
+    text-decoration: none;
+    background-color: #A6CE3A;
+    text-shadow: 0;
+}
+
 .contain-to-grid {
     background-color: #FFF;
     z-index:1000;
